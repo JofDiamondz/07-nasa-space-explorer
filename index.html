@@ -16,13 +16,37 @@
     <div class="filters">
       <input type="date" id="startDate" />
       <input type="date" id="endDate" />
-      <button>Get Space Images</button>
+      <button id="fetchButton">Get Space Images</button>
+    </div>
+
+    <!-- Random space fact -->
+    <div id="randomFact" class="random-fact">
+      <h3>🚀 Space facts you should know</h3>
+      <p id="factText">Loading amazing space fact...</p>
     </div>
 
     <div id="gallery" class="gallery">
       <div class="placeholder">
         <div class="placeholder-icon">🔭</div>
         <p>Select a date range and click "Get Space Images" to explore the cosmos!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for image details -->
+  <div id="imageModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <p class="modal-date" id="modalDate"></p>
+      </div>
+      <div class="modal-body">
+        <img class="modal-image" id="modalImage" style="display: none;" />
+        <iframe class="modal-video" id="modalVideo" style="display: none;"></iframe>
+        <div class="modal-explanation">
+          <p id="modalExplanation"></p>
+        </div>
       </div>
     </div>
   </div>
